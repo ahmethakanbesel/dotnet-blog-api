@@ -1,0 +1,454 @@
+openapi: 3.0.1
+info:
+  title: PostsApi
+  version: v1
+paths:
+  /api/Posts:
+    get:
+      tags:
+        - Posts
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+    post:
+      tags:
+        - Posts
+      requestBody:
+        content:
+          application/json;odata.metadata=minimal;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=minimal;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=minimal:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Post'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Post'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Post'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Post'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+    put:
+      tags:
+        - Posts
+      requestBody:
+        content:
+          application/json;odata.metadata=minimal;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=minimal;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=minimal:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=full:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.metadata=none:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.streaming=true:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json;odata.streaming=false:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Post'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Post'
+      responses:
+        '200':
+          description: Success
+  '/api/Posts/{id}':
+    get:
+      tags:
+        - Posts
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=minimal:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=full:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.metadata=none:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=true:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json;odata.streaming=false:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Post'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Post'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+    delete:
+      tags:
+        - Posts
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Success
+  /odata/PostsInfo:
+    get:
+      tags:
+        - PostsInfo
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json;odata.metadata=minimal;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=minimal;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=minimal:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=full;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=full;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=full:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=none;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=none;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.metadata=none:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.streaming=true:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json;odata.streaming=false:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          nullable: true
+        slug:
+          type: string
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        content:
+          type: string
+          nullable: true
+        author:
+          type: string
+          nullable: true
+        coverImage:
+          type: string
+          nullable: true
+        createDate:
+          type: string
+          format: date-time
+        updatedDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    PostDto:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          nullable: true
+        slug:
+          type: string
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        content:
+          type: string
+          nullable: true
+        author:
+          type: string
+          nullable: true
+        coverImage:
+          type: string
+          nullable: true
+      additionalProperties: false

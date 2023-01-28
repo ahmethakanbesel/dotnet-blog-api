@@ -1,0 +1,52 @@
+{
+    "title": "Post",
+    "entity": "post",
+    "api": {
+        "url": "http://api-dotnet-blog-rest-api-1236-main.k8s.net/api/Posts"
+    },
+    "filter": [],
+    "fields": [
+        {
+            "name": "id",
+            "label": "Id",
+            "isId": true,
+            "readonly": true,
+            "type": "string"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "label": "Title"
+        },
+        {
+            "name": "category",
+            "type": "string",
+            "label": "Category"
+        },
+        {
+            "name": "slug",
+            "type": "string",
+            "label": "Slug"
+        },
+        {
+            "name": "author",
+            "type": "string",
+            "label": "Author"
+        },
+        {
+            "name": "coverImage",
+            "type": "string",
+            "label": "Cover Image"
+        },
+        {
+            "name": "createDate",
+            "type": "date",
+            "label": "Created At"
+        },
+        {
+            "name": "updatedDate",
+            "type": "date",
+            "label": "Updated At"
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item active">Post</li>
+    </ol>
+</nav>
+<h2>Post Detail</h2>
+<!-- todo: figure out better material styling for alerts -->
+<div *ngIf="feedback.message" class="alert alert-{{ feedback.type }}">
+    {{ feedback.message }}
+</div>
+<form *ngIf="post" #editForm="ngForm" (ngSubmit)="save()">
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.id"
+            id="id"
+            name="id"
+            placeholder="Id"
+            readonly
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="title">Title</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.title"
+            id="title"
+            name="title"
+            placeholder="Title"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="category">Category</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.category"
+            id="category"
+            name="category"
+            placeholder="Category"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="slug">Slug</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.slug"
+            id="slug"
+            name="slug"
+            placeholder="Slug"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="author">Author</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.author"
+            id="author"
+            name="author"
+            placeholder="Author"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="coverImage">Cover Image</mat-label>
+        <input
+            matInput
+            [(ngModel)]="post.coverImage"
+            id="coverImage"
+            name="coverImage"
+            placeholder="Cover Image"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="content">Content</mat-label>
+        <textarea
+            matInput
+            [(ngModel)]="post.content"
+            id="content"
+            name="content"
+            placeholder="Content"
+        ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Created At</mat-label>
+        <input
+            matInput
+            [matDatepicker]="picker"
+            [(ngModel)]="post.createDate"
+            id="createDate"
+            name="createDate"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Updated At</mat-label>
+        <input
+            matInput
+            [matDatepicker]="picker2"
+            [(ngModel)]="post.updatedDate"
+            id="updatedDate"
+            name="updatedDate"
+        />
+        <mat-datepicker-toggle
+            matSuffix
+            [for]="picker2"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <div class="button-row" role="group">
+        <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            [disabled]="!editForm.form.valid"
+        >
+            Save
+        </button>
+        <button type="button" mat-button color="accent" (click)="cancel()">
+            Cancel
+        </button>
+    </div>
+</form>
